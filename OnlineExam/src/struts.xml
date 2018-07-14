@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <constant name="struts.custom.i18n.resources" value="global"/>
+<package name="default" namespace="/" extends="struts-default">
+
+ <action name="register" class="com.divya.actions.RegisterAction" method="Registered">
+<result name="registered">/Register.jsp</result>
+</action>
+<action name="login" class="com.divya.actions.RegisterAction" method="Login">
+<result name="NotRegistered">/Register.jsp</result>
+<result name="login">/QScreen.jsp</result>
+</action>   
+ <action name="QNext" class="com.divya.actions.RegisterAction" method="NextQ">
+<result name="next">/QScreen.jsp</result>
+</action>
+  <action name="QPre" class="com.divya.actions.RegisterAction" method=" PreviousQ">
+<result name="Previous">/QScreen.jsp</result>
+</action> 
+   <action name="Submit" class="com.divya.actions.RegisterAction" method="Submit">
+<result name="submitted">/QScreen.jsp</result>
+</action> 
+  <action name="finish" class="com.divya.actions.RegisterAction" method="Execute">
+<result name="done">/Result.jsp</result>
+</action> 
+   
+</package>
+</struts>
+
